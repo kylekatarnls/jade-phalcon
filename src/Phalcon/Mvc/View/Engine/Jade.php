@@ -1,10 +1,12 @@
 <?php
 
+namespace Phalcon\Mvc\View\Engine;
+
 use Jade\Jade,
     Phalcon\Mvc\View\Engine,
     Phalcon\Mvc\View\EngineInterface;
 
-class JadePhalcon extends Engine implements EngineInterface
+class Jade extends Engine implements EngineInterface
 {
     protected $_jade;
 
