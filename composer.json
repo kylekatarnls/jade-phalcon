@@ -1,0 +1,22 @@
+{
+    "name": "kylekatarnls/jade-phalcon",
+    "description": "HAML-like template engine for phalcon",
+    "keywords": ["jade", "minification", "template", "phalcon"],
+    "homepage": "https://github.com/kylekatarnls/jade-phalcon",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kylekatarnls",
+            "homepage": "http://github.com/kylekatarnls",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "kylekatarnls/jade-php": ">=1.1.1"
+    },
+    "autoload": {
+        "psr-0": { "Jade": "src/" }
+    }
+}
