@@ -17,6 +17,6 @@
         "kylekatarnls/jade-php": ">=1.1.1"
     },
     "autoload": {
-        "psr-0": { "Jade": "src/" }
+        "psr-0": { "Phalcon": "src/" }
     }
 }
