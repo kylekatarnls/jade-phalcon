@@ -2,8 +2,7 @@
 
 namespace Phalcon\Mvc\View\Engine;
 
-use Jade\Jade,
-    Phalcon\Mvc\View\Engine,
+use Phalcon\Mvc\View\Engine,
     Phalcon\Mvc\View\EngineInterface;
 
 class Jade extends Engine implements EngineInterface
@@ -20,7 +19,7 @@ class Jade extends Engine implements EngineInterface
     {
         //Initialize here the adapter
         parent::__construct($view, $di);
-        $this->_jade = new Jade();
+        $this->_jade = new \Jade\Jade();
     }
 
     /**
