@@ -8,7 +8,6 @@ use Phalcon\Mvc\View\EngineInterface;
 class Jade extends Engine implements EngineInterface
 {
     protected $jade;
-    protected $view;
 
     /**
      * Adapter constructor
@@ -21,7 +20,6 @@ class Jade extends Engine implements EngineInterface
         //Initialize here the adapter
         parent::__construct($view, $di);
         $this->jade = new \Jade\Jade();
-        $this->view = $view;
     }
 
     /**
@@ -32,9 +30,9 @@ class Jade extends Engine implements EngineInterface
      */
     public function render($path, $params, $mustClean = false)
     {
-        $content = $this->jade->render($path, $this->view->getParams());
+        $content = $this->jade->render($path, $params);
         if($mustClean) {
-            $this->view->setContent($content);
+            $this->_view->setContent($content);
         } else {
             echo $content;
         }
