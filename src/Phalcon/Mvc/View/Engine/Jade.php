@@ -29,9 +29,14 @@ class Jade extends Engine implements EngineInterface
      * @param string $path
      * @param array $params
      */
-    public function render($path, $params)
+    public function render($path, $params, $mustClean = false)
     {
-        echo $this->_jade->render($path, $this->_view->getParams());
+        $content = $this->_jade->render($path, $this->_view->getParams());
+        if($mustClean) {
+            $this->_view->setContent($content);
+        } else {
+            echo $content;
+        }
     }
 
 }
