@@ -21,7 +21,10 @@ $di['view'] = function() {
     $view->setViewsDir('../app/views/');
     $view->registerEngines(array(
         ".jade" => function($view, $di) {
-            return new Jade($view, $di);
+            return new Jade($view, $di, array(
+				'cache' => '/tmp/myproject/jade',
+				'prettyprint' => APP_ENV == 'development',
+            ));
         }
     ));
     return $view;

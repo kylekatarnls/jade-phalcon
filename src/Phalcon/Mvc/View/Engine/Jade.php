@@ -14,12 +14,13 @@ class Jade extends Engine implements EngineInterface
      *
      * @param \Phalcon\Mvc\View $view
      * @param \Phalcon\DI $di
+     * @param array $options
      */
-    public function __construct($view, $di)
+    public function __construct($view, $di, $options = array())
     {
         //Initialize here the adapter
         parent::__construct($view, $di);
-        $this->jade = new \Jade\Jade();
+        $this->jade = new \Jade\Jade($options);
     }
 
     /**
