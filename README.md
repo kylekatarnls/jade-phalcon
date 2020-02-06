@@ -1,3 +1,5 @@
+This repository now lives on https://github.com/pug-php/pug-phalcon
+
 # pug-phalcon
 Pug Template Engine for Phalcon
 
@@ -41,7 +43,7 @@ Now you can add pug files in the views directory:
 
 app/views/index.pug:
 
-```jade
+```pug
 doctype html
 html
   head
